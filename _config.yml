@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 大波斯菊你是我的帽子 
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
+title: biubiubiu    
+subtitle: eadem mutata resurgo
+description: zhongjialei's blog
+keywords: blog
+author: ZhongJialei 
+language: zh
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: aircloud 
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -82,4 +82,8 @@ deploy:
   repo: https://github.com/Alaleo/alaleo.github.io.git 
   branch: master 
   
+search:
+  path: search.json
+  field: post
 
+sidebar-avatar: img/favicon.ico
