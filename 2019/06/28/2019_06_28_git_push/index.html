@@ -11,7 +11,7 @@
 
     <title>
         
-        Hello World - undefined
+        git push - undefined
         
     </title>
 
@@ -89,7 +89,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#repository"><span class="toc-text">repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#refspec"><span class="toc-text">refspec</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#–prune"><span class="toc-text">–prune</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#–all-–mirror-–tags"><span class="toc-text">–all,–mirror,–tags</span></a></li></ol>
 </div>
     
 </div>
@@ -120,31 +120,56 @@
 
 <div class="post-container">
     <div class="post-title">
-        Hello World
+        git push
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2019-06-28 11:59:54</span></span>
+        <span class="attr">发布于：<span>2019-06-28 12:05:24</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#git" title="git">git</a>
+        <span>/</span>
         
         
+        </span>
         <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
 </span>
 
     </div>
     <div class="post-content ">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <p><strong>git push</strong>: updates remote refs using local refs</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git push  [--all | --mirror | --tags]</span><br><span class="line">          [--prune]</span><br><span class="line">          [&lt;repository&gt; [&lt;refspec&gt;...]]</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<h2 id="repository"><a href="#repository" class="headerlink" title="repository"></a>repository</h2><p><code>&lt;repository&gt;</code>指定远程仓库</p>
+<p>缺省时， 参考顺序为</p>
+<ol>
+<li><code>branch.*.remote</code>，’*’指branch</li>
+<li><code>origin</code></li>
+</ol>
+<h2 id="refspec"><a href="#refspec" class="headerlink" title="refspec"></a>refspec</h2><p><code>&lt;refspec&gt;</code>指定what destination ref to update with what source object。</p>
+<p>缺省<code>&lt;refspec&gt;</code>并且没指定<code>--all</code>, <code>--mirror</code>, <code>--tags</code>时，参考顺序为</p>
+<ol>
+<li><code>remote.*.push</code>，’*’指remote仓库 </li>
+<li><code>push.default</code></li>
+<li>当命令行或配置都没有的情况下，会发生the current branch is pushed to the corresponding upstream branch, but as a safety measure, the push is aborted if the upstream branch does not have the same name as the local one</li>
+</ol>
+<p>格式为<code>[+]&lt;src&gt;:&lt;dst&gt;</code></p>
+<p><code>&lt;src&gt;</code>一般是想要push的分支名，但可以是任何 “SHA-1 expression”。例如<code>master~4</code>,<code>HEAD</code></p>
+<p><code>&lt;dst&gt;</code>指出远端的哪个ref需要被更新，必须是一个实际的ref</p>
+<p><code>:&lt;dst&gt;</code>也可缺省，缺省时参考顺序为</p>
+<ol>
+<li><code>remote.&lt;repository&gt;.push</code></li>
+<li>same ref as the <code>&lt;src&gt;</code></li>
+</ol>
+<p>如果<code>&lt;dst&gt;</code>不是以<code>refs/</code>开始，那么git会尝试去推测完整的ref,当给出的<code>&lt;dst&gt;</code>能唯一找到一个ref时，直接使用。如果不行，会根据<code>&lt;src&gt;</code>所在的<code>refs/</code>来推断。</p>
+<h2 id="–prune"><a href="#–prune" class="headerlink" title="–prune"></a>–prune</h2><p>将所有已经不存在对应本地分支的远程分支移除。例如，一个远程分支名为<code>tmp</code>,如果本地不存在同名分支了，那么在运行这个命令后远程分支<code>tmp</code>会被移除。</p>
+<h2 id="–all-–mirror-–tags"><a href="#–all-–mirror-–tags" class="headerlink" title="–all,–mirror,–tags"></a>–all,–mirror,–tags</h2><p><strong>–all</strong></p>
+<p>将refs under <code>refs/heads/</code> （所有分支）push到远端</p>
+<p><strong>–mirror</strong></p>
+<p>将all refs under <code>refs/</code> (包括<code>refs/heads/</code>, <code>refs/remotes/</code>, <code>refs/tags/</code>……) 映射到远端</p>
+<p><strong>–tags</strong></p>
+<p>将all refs under <code>refs/tags</code> push 到远端</p>
 
         
         <br>
